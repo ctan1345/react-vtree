@@ -123,6 +123,13 @@ const computeTree = <T extends {}>(
               useDefaultHeight: true,
             });
           },
+          async setIsOpen(isOpen): Promise<void> {
+            record.isOpen = isOpen;
+            await recomputeTree({
+              refreshNodes: record.isOpen,
+              useDefaultHeight: true,
+            });
+          },
         };
 
         records[id as string] = record;

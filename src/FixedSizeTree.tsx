@@ -80,6 +80,10 @@ const computeTree = <T extends {}>(
             record.isOpen = !record.isOpen;
             await recomputeTree({refreshNodes: record.isOpen});
           },
+          async setIsOpen(isOpen): Promise<void> {
+            record.isOpen = isOpen;
+            await recomputeTree({refreshNodes: record.isOpen});
+          },
         };
 
         records[id as string] = record;

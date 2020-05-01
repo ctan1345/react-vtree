@@ -32,6 +32,7 @@ export type CommonNodeRecord<TData extends CommonNodeData<T>, T> = {
   data: TData;
   isOpen: boolean;
   readonly toggle: () => Promise<void>;
+  readonly setIsOpen: (isOpen: boolean) => Promise<void>;
 };
 
 export type CommonNodeComponentProps<TData extends CommonNodeData<T>, T> = Omit<

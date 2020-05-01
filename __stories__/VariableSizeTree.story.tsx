@@ -68,6 +68,7 @@ const Node: React.FunctionComponent<VariableSizeNodeComponentProps<
   resize,
   style,
   toggle,
+  setIsOpen,
   treeData: itemSize,
 }) => {
   const canOpen = height <= itemSize;
